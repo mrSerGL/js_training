@@ -20,17 +20,24 @@
 *
 */
 
-let balance = 100000;
-const payment = 10000;
+let balance = 1000
+const payment = 100;
 
-alert(`Общая стоимоcть заказа ${payment} кредитов. Проверяем количество доступных средств на счету.`)
+console.log(`Общая стоимоcть заказа ${payment} кредитов. Проверяем количество доступных средств на счету.`);
+// alert(`Общая стоимоcть заказа ${payment} кредитов. Проверяем количество доступных средств на счету.`)
 
-alert(`Доступно ${balance} кредитов.`)
+console.log(`Доступно ${balance} кредитов.`);
+// alert(`Доступно ${balance} кредитов.`)
 
 if (payment <= balance) {
-    balance = (balance - payment);
-    alert(`На счету осталось ${balance} кредитов.`)
-    alert("Спасибо за покупку!.")
+    // balance = (balance - payment);
+    balance -= payment;
+
+    console.log(`На счету осталось ${balance} кредитов.`);
+    console.log('Спасибо за покупку!.');
+     // alert(`На счету осталось ${balance} кредитов.`)
+    // alert("Спасибо за покупку!.")
+
 } else {
     alert("На счету недостаточно средств для проведения операции.")
     alert("Операция завершена.")

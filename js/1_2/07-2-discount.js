@@ -13,31 +13,47 @@
 * "Оформляем заказ на сумму [сумма] со скидкой [скидка]"
 */
 
-const totalSpent = 99;
+let totalSpent = 4900;
 let payment = 500;
 let discount = 0;
+
+
+if (totalSpent < 100) {
+    alert("У Вас еще нет партнерской скидки");
+}
 
 if (totalSpent >= 100 && totalSpent < 1000) {
     discount = 2;
     payment = payment / 100 * (100- discount);
-    alert(`Бронзовый партнер, скидка 2%. К оплате: ${payment} кредитов`)
+    // alert(`Бронзовый партнер, скидка 2%. К оплате: ${payment} кредитов`);
+    console.log(`Бронзовый партнер, скидка 2%. К оплате: ${payment} кредитов`);
+    
 } else
 
 if (totalSpent >= 1000 && totalSpent < 5000) {
     discount = 5;
     payment = payment / 100 * (100- discount);
-    alert(`Серебряный партнер, скидка 5%. К оплате: ${payment} кредитов`)
-} else
-
-if (totalSpent >= 5000) {
+    // alert(`Серебряный партнер, скидка 5%. К оплате: ${payment} кредитов`);
+    console.log(`Серебряный партнер, скидка 5%. К оплате: ${payment} кредитов`);
+    
+} else  {
     discount = 10;
     payment = payment / 100 * (100- discount);
-    alert(`Золотой партнер, скидка 10%. К оплате: ${payment} кредитов`)
-} 
+    // alert(`Золотой партнер, скидка 10%. К оплате: ${payment} кредитов`);
+    console.log(`Золотой партнер, скидка 10%. К оплате: ${payment} кредитов`);
+    
+    } 
 
-else {
-    alert("У Вас еще нет партнерской скидки");
-}
+
+    
+totalSpent += payment
+    
+console.log(`Оплачено:, ${payment}`);
+console.log(`Сумма покупок:, ${totalSpent}`);
+    
+    
+
+
 
 
 
