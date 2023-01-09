@@ -3,14 +3,16 @@
 //todo  Цикл з передумовою — цикл, який виконується, доки правдива якась умова, зазначена до його початку. 
 //todo  Ця умова перевіряється до виконання тіла циклу, тому тіло може не виконатися жодного разу, якщо умова від самого початку - хибна 
 
-// let counter = 0;
+// let counter = 8;
 
 // while (counter < 10) {
 //   console.log("counter: ", counter);
 //   counter += 1;
 // }
 
-// let clientCounter = 18;
+//==============================================================
+
+// let clientCounter = 21;
 // const maxClients = 25;
 
 // while (clientCounter < maxClients) {
@@ -23,7 +25,7 @@ console.log('========== Цикл do...while ================');
 //todo  Цикл з постумовою - цикл, в якому умова перевіряється після виконання тіла циклу.
 //todo  З цього випливає, що тіло завжди виконується хоча б один раз.
 
-// let password = "";
+let password = "";
 
 // do {
 //   password = prompt("Введіть пароль довший 4-х символів", "");
@@ -45,7 +47,7 @@ console.log('========== Цикл for ================');
 
 
 //console.log("Порахуємо суму чисел до певного значення.");
-//const target = 3;
+// const target = 45;
 // let sum = 0;
 // for (let i = 0; i <= target; i += 1) {
 //   sum += i;
@@ -54,10 +56,10 @@ console.log('========== Цикл for ================');
 
 
 // console.log("Згадаємо про операцію a % b і виведемо остачу від ділення за допомогою циклу.");
-// const max = 10;
-// for (let i = 0; i < max; i += 1) {
-//   console.log(`${max} % ${i} = `, max % i);
-// }
+const max = 10;
+for (let i = 0; i < max; i += 1) {
+  console.log(`${max} % ${i} = `, max % i);
+}
 
 // console.log("========== Оператор break ========== ");
 // for (let i = 0; i <= 5; i += 1) {
@@ -72,12 +74,12 @@ console.log('========== Цикл for ================');
 
 console.log("========== Оператор continue ========== ");
 
-const number = 10;
+// const number = 10;
 
-for (let i = 0; i < number; i += 1) {
-  if (i % 2 === 0) {
-    continue;
-  }
+// for (let i = 0; i < number; i += 1) {
+//   if (i % 2 === 0) {
+//     continue;
+//   }
 
-  console.log("Непарне i: ", i); // 1, 3, 5, 7, 9
-}
+//   console.log("Непарне i: ", i); // 1, 3, 5, 7, 9
+// }
