@@ -20,31 +20,30 @@ const cards = [
    * Удаление (по индексу), метод indexOf()
    */
   
-  // const cardToRemove = 'Карточка-3';
-  // const index = cards.indexOf(cardToRemove);
+  // const cardToRemove = 'Карточка-3';          // карта к удалению
+  // const index = cards.indexOf(cardToRemove);  // получаем индекс карты к удалению
   // console.log(index);
   
-  // cards.splice(index, 1);
-  
+  // cards.splice(index, 1);   // удаляем карту начиная с индекс = index, к-во = 1
   // console.table(cards);
   
   /*
    * Добавление (по индексу)
    */
-  // const cardToInsert = 'Карточка-6';
-  // const index = 3;
+  // const cardToInsert = 'Карточка-6';  // карта к добавлению Карточка-6'
+  // const index = 3;                    // добавить на место с index = 3
   
-  // cards.splice(index, 0, cardToInsert);
+  // cards.splice(index, 0, cardToInsert);  // вставояем на позицию, ничего не удаляем, добавляемая карта
   // console.table(cards);
   
   /*
-   * Обновление (по индексу)
+   * Обновление (по индексу) Замена
    */
-  const cardToUpdate = 'Карточка-4';
-  const index = cards.indexOf(cardToUpdate);
+  const cardToUpdate = 'Карточка-4';           // заменяемая карта
+  const index = cards.indexOf(cardToUpdate);   // индекс заменяемой карты
   
   console.log(index);
   
-  cards.splice(index, 1, 'Обновленная карточка-4');
-  
+  cards.splice(index, 1, 'Обновленная карточка-4');  
+  // индекс заменяемой карты , количество удаляемых элементов, заменяемая карта
   console.table(cards);
