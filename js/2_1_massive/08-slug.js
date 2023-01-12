@@ -10,15 +10,40 @@
 // Должно получиться top-10-benefits-of-react-framework
 const title = 'Top 10 benefits of React framework';
 
-const normalizedTitle = title.toLowerCase();
-// console.log(normalizedTitle);
+// const normalizedTitle = title.toLowerCase(); // нормализация строки
+// const words = normalizedTitle.split(' ');    // создать массив
+// const slug = words.join('-');                // slug 
 
-const words = normalizedTitle.split(' ');
-// console.log(words);
-
-const slug = words.join('-');
 // console.log(slug);
 
-const slug1 = title.toLowerCase().split(' ').join('-');
+//* цепочки вызовов - убираем ненужные переменные - вызовы
 
-console.log(slug1);
+// const slug =  ((title.toLowerCase()).split(' ')).join('-');
+
+const slug = title.toLowerCase().split(' ').join('-');  //! 
+
+console.log(slug); 
+
+
+
+
+
+
+
+
+
+// ================== Репета ====================================
+
+// const normalizedTitle = title.toLowerCase();
+// // console.log(normalizedTitle);
+
+// const words = normalizedTitle.split(' ');
+// // console.log(words);
+
+// const slug = words.join('-');
+// // console.log(slug);
+
+// const slug1 = title.toLowerCase().split(' ').join('-');
+
+// console.log(slug1);
+
