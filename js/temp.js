@@ -1,77 +1,217 @@
-//* 1. Объявление параметров x, y, z
-// function multiply(x, y, z) {
-   
-//     return x * y * z;
+// ===== for 
+
+// function calculateTotal(number) {
+
+// let total = 0;
+
+// for (let i = 1; i <= number; i += 1) {
+//   console.log(i);
+  
+
+// total += i;
+
+
+// }
+// console.log("==============");
+// console.log("summ:",total);
+
+// return total;
 // }
 
-//? Когда интерпретатор встречает вызов функции (или метода), он приостанавливает выполнение текущего кода и начинает выполнять код из тела функции. После того как весь код функции будет выполнен, интерпретатор выходит из тела функции, возвращаясь в то место, откуда пришел и продолжает выполнять код, следующий после вызова функции.
+// calculateTotal(1);
+// calculateTotal(3);
+// calculateTotal(7);
 
-// console.log("Лог до вызова функции multiply");
-// let result = multiply(2, 3, 66665);
-// console.log(result);
-// console.log("Лог после вызова функции multiply");
-  
-//* 2. Передача аргументов
-//|    multiply(2, 3, 55); // Результат умножения равен 30
-//|    multiply(4, 8, 12); // Результат умножения равен 384
-//|    multiply(17, 6, 25); // Результат умножения равен 2550
+// ==========================
+// const fruits = ['apple', 'plum', 'pear', 'orange'];
+// console.log(fruits.length);
 
-//*Когда интерпретатор встречает return, он сразу же выходит из функции (прекращает её выполнение), и возвращает указанное значение в то место кода, где функция была вызвана.
+// for (let i = 0; i <= fruits.length-1; i += 1) { // Change this line
+//   const fruit = fruits[i]; // Change this line
+//   console.log(fruit);
+// }
 
-//|  function multiply(x, y, z) {
-//|  console.log("Код до return выполняется как обычно");
-//|  // Возвращаем результат выражения умножения
-//|  return x * y * z;
-//|  console.log("Этот лог никогда не выполнится, он стоит после return");
-//|}
+// ==========================
 
-//*  Результат работы функции можно сохранить в переменную
+// function calculateTotalPrice(order){
 
-// |  let result = multiply(2, 3, 66665);
-// |  console.log(result); // 30
+//   let total = 0;
 
-// |  result = multiply(4, 8, 12);
-// |  console.log(result); // 384
+//   for (let i = 0; i <= order.length-1; i += 1 ){
+//   console.log(order[i]);
+//   total += order[i];  
+//   }
 
-// |  result = multiply(17, 6, 25);
-// |  console.log(result); // 2550
+//   console.log("summ:", total);
+// }
 
-// ===== Параметры по умолчанию
-//? Иногда необходимо объявить функцию, у параметров которой будут значения отличные от undefined, даже если для них не передали аргументы. Это делается очень простым и очевидным образом, достаточно указать значение по умолчанию прямо при объявлении параметров в подписи функции. При такой записи, если для параметра не передано значение аргумента, используется значение по умолчанию.
+// calculateTotalPrice([12, 85, 37, 4]) // возвращает 138
+// calculateTotalPrice([164, 48, 291]) // возвращает 503
+// calculateTotalPrice([412, 371, 94, 63, 176]) // возвращает 1116
 
-// function count(countFrom = 0, countTo = 10, step = 1) {
-//   console.log(`countFrom = ${countFrom}, countTo = ${countTo}, step = ${step}`);
+//================= непонятный результьат сравнения слов =========
 
-//   for (let i = countFrom; i <= countTo; i += step) {
-//     console.log(i);
+// function findLongestWord(string) {
+//   let LongestWord = " ";
+
+//   const wordArray = string.split(" ");
+//   console.log(wordArray);
+
+// for (let i=0; i <= wordArray.length-1; i +=1){
+//    if (LongestWord < wordArray[i]){
+//     LongestWord = wordArray[i];
+//    }
+// }
+// console.log(LongestWord);
+
+// }
+// findLongestWord("Google do a roll") 
+// findLongestWord("May the force be with you")
+
+// ====== работает!!! ====
+// let longestWord;
+
+// function findLongestWord(string) {
+
+//   let maxNumberOfLetters = 0;
+
+//   const words = string.split(" ");
+
+
+//   for (const word of words) {
+
+//     const letters = word.split("");
+
+//     const numberOfLetters = word.length;
+    
+//     if (numberOfLetters > maxNumberOfLetters){
+//       maxNumberOfLetters = numberOfLetters;
+//       longestWord = word;
+      
+//     }
+    
+//     }
+
+// console.log(longestWord);
+// }
+
+// findLongestWord("The quick brown fox jumped over the lazy dog") //возвращает jumped
+// findLongestWord("Google do") //возвращает Google
+// findLongestWord("May the force be with you") //возвращает force
+
+// ============= Ok ==========
+
+// function createArrayOfNumbers(min, max) {
+//   const numbers = [];
+//   // Change code below this line
+
+// // получить массив numbers значений от min до max
+// // - начиная  мин добавлять массив значение до макс
+
+//   for (let i = min; i <= max; i += 1) (
+//     numbers.push(i)
+//   )
+//   console.log(numbers);
+   
+//   // Change code above this line
+//   return numbers;
+// }
+
+// createArrayOfNumbers(1, 3) // возвращает [1, 2, 3]
+// createArrayOfNumbers(14, 17) // возвращает [14, 15, 16, 17]
+// createArrayOfNumbers(29, 34) // возвращает [29, 30, 31, 32, 33, 34]
+
+// ============= OK ==========
+
+// function filterArray(numbers, value) {
+
+// let fiteredNumbers = [];
+
+// for (let i = 0; i <= numbers.length -1; i +=1){
+//   if (numbers[i] > value) {
+//     fiteredNumbers.push(numbers[i]);
 //   }
 // }
 
-// count(1, 5); // countFrom = 1, countTo = 5, step = 1
-// count(2); // countFrom = 2, countTo = 10, step = 1
-// count(); // countFrom = 0, countTo = 10, step = 1
+// console.log(fiteredNumbers);
+// }
 
-// ===== Псевдомассив arguments
+// filterArray([1, 2, 3, 4, 5], 3) //возвращает [4, 5]
+// filterArray([1, 2, 3, 4, 5], 4) //возвращает [5]
+// filterArray([1, 2, 3, 4, 5], 5) //возвращает []
+// filterArray([12, 24, 8, 41, 76], 38) //возвращает [41, 76]
+// filterArray([12, 24, 8, 41, 76], 20) //возвращает [24, 41, 76]
 
-//?Доступ к списку всех аргументов можно получить при помощи <b>\\\ специальной переменной arguments ///</b>, которая доступна только внутри функции и хранит все аргументы как псевдомассив.
+// ===========  ok ====================
 
-//? Псевдомассив - коллекция, со свойством length и возможностью обратиться к элементу по индексу, но отсутствием большинства методов для работы с массивом.
+// function checkFruit(fruit) {
+//   const fruits = ["apple", "plum", "pear", "orange"];
 
-//? Рассмотрим пример использования arguments в функции, которая умножает любое количество аргументов:
+//   console.log( fruits.includes(fruit));
+//  // return fruits.includes(fruit); // Change this line
+// }
 
-function multiply() {
-  let total = 1;
+// checkFruit("plum") //возвращает true
+// checkFruit("mandarin") //возвращает false
+// checkFruit("pear") //возвращает true
+// checkFruit("Pear") //возвращает false
+// checkFruit("apple") //возвращает true
 
-  for (const argument of arguments) {
-    total *= argument;
-  }
+// ========================================
 
-  return total;
-}
+// function getCommonElements(array1, array2) {
+//   // Change code below this line
+//   const array3 = [];
+//   for (const itemOfarray1 of array1) {
+  
+//       if (array2.includes(itemOfarray1)) {
+//          array3.push(itemOfarray1)
+//       }
 
-console.log(multiply(1, 2, 3)); //  6
-console.log(multiply(1, 2, 3, 4)); //  24
-console.log(multiply(1, 2, 3, 4, 5)); //  120
+//   }
+
+//   console.log(array3); 
+//   return array3; 
+
+//  // Change code above this line
+// }
+
+// getCommonElements([1, 2, 3], [2, 4]) // возвращает [2]
+// getCommonElements([1, 2, 3], [2, 1, 17, 19]) // возвращает [1, 2]
+// getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]) // возвращает [12, 27, 3]
+// getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]) // возвращает [10, 30, 40]
+// getCommonElements([1, 2, 3], [10, 20, 30]) // возвращает []
+
+// =============  Ok ===========================
+
+// function includes(array, value) {
+//   // Change code below this line
+//   let isIncludes;
+  
+//   for (let i = 0; i <= array.length - 1; i += 1){
+//     // console.log("что ищем?",array[i], `в ${value}`);
+    
+//     if (array[i] === value){
+//      isIncludes = true;
+//       break;
+//     }
+//    isIncludes = false;
+//   // Change code above this line
+// }
+//  console.log(isIncludes);
+ 
+// }
+
+// includes([1, 2, 3, 4, 5], 3) //возвращает true
+// includes([1, 2, 3, 4, 5], 17) //возвращает false
+// includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter")   //возвращает true
+// includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus")   //возвращает false
+// includes(["apple", "plum", "pear", "orange"], "plum")   //возвращает true
+// includes(["apple", "plum", "pear", "orange"], "kiwi")   //возвращает false
+
+// ===================
+
+
 
 
 
@@ -80,7 +220,6 @@ console.log(multiply(1, 2, 3, 4, 5)); //  120
 
 
   
-
 
 
 
