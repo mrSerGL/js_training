@@ -46,3 +46,4 @@ console.log(slug);
 // const slug1 = title.toLowerCase().split(' ').join('-');
 
 // console.log(slug1);
+
