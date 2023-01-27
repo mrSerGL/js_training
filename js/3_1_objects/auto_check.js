@@ -127,6 +127,227 @@ console.log(bookPrice); // undefined */
   // Change code above this line
    */
 
+
+
+  //* Задача 4/41
+/*       const user = {
+        name: "Jacques Gluke",
+        tag: "jgluke",
+        location: {
+          country: "Jamaica",
+          city: "Ocho Rios",
+        },
+        hobbies: ["swiming", "music", "sci-fi"],
+      }; */
+  //- Для доступа к вложенным свойствам используется цепочка обращений «через точку». Например, если необходимо получить значение страны пользователя, записываем user.location.country, где user.location это обращение (путь) к объекту в свойстве location, а user.locaton.country обращение к свойству country в этом объекте. То есть, «точка» указывает следующую вложенность.
+  
+/*       const location = user.location;
+      console.log(location); // Объект location
+      
+      const country = user.location.country;
+      console.log(country); // "Jamaica" */
+
+  //- Если значение свойства это массив, то в нашем примере user.hobbies - обращение к этому массиву. Далее, можно получить доступ к его элементам через квадратные скобки и индекс или использовать свойства и методы.
+  
+/*       const hobbies = user.hobbies;
+      console.log(hobbies); // ["swiming", "music", "sci-fi"]
+      
+      const firstHobby = user.hobbies[0];
+      console.log(firstHobby); // "swiming"
+      
+      const numberOfHobbies = user.hobbies.length;
+      console.log(numberOfHobbies); // 3 */
+  
+      //? Дополни код присвоив объявленным переменным выражения обращения к соответствующим свойствам обьекта apartment.
+
+      //| ownerName - имя владельца;
+      //| ownerPhone - телефон владельца;
+      //| ownerEmail - почта владельца;
+      //| numberOfTags - количество элементов массива в свойстве tags;
+      //| firstTag - первый элемент массива в свойстве tags;
+      //| lastTag - последний элемент массива в свойстве tags.
+
+/*           const apartment = {
+  imgUrl: "https://via.placeholder.com/640x480",
+  descr: "Spacious apartment in the city center",
+  rating: 4,
+  price: 2153,
+  tags: ["premium", "promoted", "top"],
+  owner: {
+    name: "Henry",
+    phone: "982-126-1588",
+    email: "henry.carter@aptmail.com",
+  },
+};
+
+// Change code below this line
+const ownerName = apartment.owner.name;
+const ownerPhone = apartment.owner.phone;
+const ownerEmail = apartment.owner.email;
+const numberOfTags = apartment.tags.length;
+const firstTag = apartment.tags[0];
+const lastTag = apartment.tags[apartment.tags.length - 1];
+// Change code above this line */
+
+
+
+
+// *Задача 5/41
+
+//- Второй способ получить доступ к свойству объекта это синтаксис обьект["ключ_свойства"]. Похоже на обращение к элементу массива с отличием в том, что в скобках указывается не индекс элемента, а имя свойства как строка.
+
+//- Синтаксис «квадратных скобок» используется значительно реже. Как правило в случаях когда имя свойства заранее неизвестно или оно хранится в переменной (как значение параметра функции, например).
+
+//- На место обращения будет возвращено значение свойства с таким именем.
+//- Если в объекте нет свойства с таким именем, на место обращения вернётся undefined.
+
+/*               const book = {
+      title: "The Last Kingdom",
+      author: "Bernard Cornwell",
+      genres: ["historical prose", "adventure"],
+      public: true,
+      rating: 8.38,
+    };
+    
+    const bookTitle = book["title"];
+    console.log(bookTitle); // "The Last Kingdom"
+    
+    const bookGenres = book["genres"];
+    console.log(bookGenres); // ["historical prose", "adventure"]
+    
+    const propKey = "author";
+    const bookAuthor = book[propKey];
+    console.log(bookAuthor); // "Bernard Cornwell" */
+
+    //?Дополни код присвоив объявленным переменным выражения обращения к соответствующим свойствам обьекта apartment используя синтаксис «квадратных скобок».
+
+    //| aptRating - рейтинг;
+    //| aptDescr - описание;
+    //| aptPrice - цена;
+    //| aptTags - теги.
+
+/*                   const apartment = {
+          imgUrl: "https://via.placeholder.com/640x480",
+          descr: "Spacious apartment in the city center",
+          rating: 4,
+          price: 2153,
+          tags: ["premium", "promoted", "top"],
+        };
+        
+        // Change code below this line
+        const aptRating = apartment["rating"];
+        const aptDescr = apartment["descr"];
+        const aptPrice = apartment["price"];
+        const aptTags = apartment["tags"];
+        // Change code above this line */
+
+            
+
+  //* Задача 6/41
+  //- После того, как объект создан, значение его свойств можно изменить. Для этого необходимо обратиться к ним по имени, например, «через точку», и присвоить новое значение.
+  
+/*                       const book = {
+        title: "The Last Kingdom",
+        author: "Bernard Cornwell",
+        genres: ["historical prose", "adventure"],
+        public: true,
+        rating: 8.38,
+      };
+      
+      book.rating = 9;
+      book.public = false;
+      book.genres.push("drama");
+      
+      console.log(book.rating); // 9
+      console.log(book.public); // false
+      console.log(book.genres); // ["historical prose", "adventure", "drama"]   */  
+
+
+  //? Дополни код обновив значения свойств объекта apartment:
+
+  //| цену в свойстве price на 5000;
+  //| рейтинг квартиры в свойстве rating на 4.7;
+  //| имя владельца во вложенном свойстве name на "Henry Sibola";
+  //| массив тегов в свойстве tags добавив в конец строку "tr}usted".
+
+
+/*   const apartment = {
+    imgUrl: "https://via.placeholder.com/640x480",
+    descr: "Spacious apartment in the city center",
+    rating: 4,
+    price: 2153,
+    tags: ["premium", "promoted", "top"],
+    owner: {
+      name: "Henry",
+      phone: "982-126-1588",
+      email: "henry.carter@aptmail.com",
+    },
+  };
+  
+  // Change code below this line
+  apartment.price = 5000;
+  apartment.rating = 4.7;
+  apartment.owner.name = "Henry Sibola";
+  apartment.tags.push("trusted"); */
+                    
+
+
+  //* Задача 7/41
+  //- Операция добавления нового свойства после создания объекта ничем не отличается от изменения значения уже существующего свойства. Если при записи значения по имени, такого свойства в объекте нет, оно будет создано.
+  
+/*   const book = {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    genres: ["historical prose", "adventure"],
+    public: true,
+    rating: 8.38,
+  };
+  
+  book.pageCount = 836;
+  book.originalLanguage = "en";
+  book.translations = ["ua", "ru"];
+  
+  console.log(book.pageCount); // 836
+  console.log(book.originalLanguage); // "en"
+  console.log(book.translations); // ["ua", "ru"] */
+
+  //?   Добавь объекту apartment несколько новых свойств:
+
+  //| area - площадь в квадратных метрах, число 60;
+  //| rooms - количество комнат, число 3;
+  //| location - местоположение квартиры, обьект со следующими вложенными свойствами;
+  //| country - страна, строка "Jamaica";
+  //| city - город, строка "Kingston".
+
+  /*   const apartment = {
+      imgUrl: "https://via.placeholder.com/640x480",
+      descr: "Spacious apartment in the city center",
+      rating: 4.7,
+      price: 5000,
+      tags: ["premium", "promoted", "top", "trusted"],
+      owner: {
+        name: "Henry Sibola",
+        phone: "982-126-1588",
+        email: "henry.carter@aptmail.com",
+      },
+    };
+    
+    // Change code below this line
+    apartment.area = 60;
+    apartment.rooms = 3;
+    apartment.location = {
+      country: "Jamaica",
+      city: "Kingston",
+    }; */
+  
+  
+          
+      
+
+
+
+
+
 //=========================================
 
 //* Задача 25/41
