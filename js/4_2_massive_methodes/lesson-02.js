@@ -206,17 +206,17 @@ const cars = [
 
 // ======================
 
-/*   const getCarsWithType = (cars, type) => cars.filter((car) => car.type === type);
+//|      const getCarsWithType = (cars, type) => cars.filter((car) => car.type === type);
 
-// const getCarsWithType = (cars, type) => {
-//     const result = cars.filter(car => {
-//         return car.type === type;
-//     });
-//     return result;
-// };
+//|      const getCarsWithType = (cars, type) => {
+//|          const result = cars.filter(car => {
+//|              return car.type === type;
+//|          });
+//|          return result;
+//|      };
 
-console.table(getCarsWithType(cars, 'suv'));
-console.table(getCarsWithType(cars, 'sedan')); */
+// console.table(getCarsWithType(cars, 'suv'));
+// console.table(getCarsWithType(cars, 'sedan'));
 
 // =============================
 
@@ -228,20 +228,20 @@ console.table(getCarsWithType(cars, 'sedan')); */
       console.log(getCarByModel(cars, 'F-150'));
       console.log(getCarByModel(cars, 'CX-9'));
   */
-//v1
-// const getCarByModel = (cars, model) => {
-//   const result = cars.find((car) => {
-//     return car.model === model;
-//   });
+//*v1
+//|       const getCarByModel = (cars, model) => {
+//|         const result = cars.find((car) => {
+//|           return car.model === model;
+//|         });
 
-//   return result;
-// };
+//|         return result;
+//|       };
 
-//v2
-// const getCarByModel = (cars, model) => cars.find((car) => car.model === model);
+//*v2
+//|        const getCarByModel = (cars, model) => cars.find((car) => car.model === model);
 
-// console.log(getCarByModel(cars, 'F-150'));
-// console.log(getCarByModel(cars, 'CX-9'));
+//|        console.log(getCarByModel(cars, 'F-150'));
+//|        console.log(getCarByModel(cars, 'CX-9'));
 
 /*
  */
@@ -253,15 +253,15 @@ console.table(getCarsWithType(cars, 'sedan')); */
       console.table(sortByAscendingAmount(cars));
   */
 
-// const sortByAscendingAmount = (cars) => {
-//   const result = cars.sort((a, b) => {
-//     return a.amount - b.amount;
-//   });
+//|         const sortByAscendingAmount = (cars) => {
+//|           const result = cars.sort((a, b) => {
+//|             return a.amount - b.amount;
+//|           });
 
-//   console.table(result);
-// };
+//|           console.table(result);
+//|         };
 
-// console.table(sortByAscendingAmount(cars));
+//|         console.table(sortByAscendingAmount(cars));
 
 /*
  */
@@ -272,18 +272,52 @@ console.table(getCarsWithType(cars, 'sedan')); */
       const sortByDescendingPrice = cars => {};
       console.table(sortByDescendingPrice(cars));
   */
+// ========================================
+// v. 1
+//   const sortByDescendingPrice = cars => {
+//     const result = [...cars].sort((car_a, car_b)=> {
+//       return  car_a.price - car_b.price;
+//     });
+//     return result;
+//   };
+
+// v.2
+// const sortByDescendingPrice = cars =>[...cars].sort((car_a, car_b)=> car_a.price - car_b.price);
+
+// console.table(sortByDescendingPrice(cars));
+//  ========================================
 
 /*
  */
-/*
-      ## Example 9 - Метод sort
-      Нехай функція `sortByModel` повертає новий масив автомобілів відсортований
-      за назвою моделі в алфавітному та зворотному алфавітному порядку, в залежності від
-      значення параметра `order`.
-      const sortByModel = (cars, order) => {};
-      console.table(sortByModel(cars, 'asc'));
-      console.table(sortByModel(cars, 'desc'));
-  */
+
+    //*   ## Example 9 - Метод sort
+
+    //?   Нехай функція `sortByModel` повертає новий масив автомобілів відсортований за назвою моделі в алфавітному та зворотному алфавітному порядку, в залежності від  значення параметра `order`.
+
+    //-   const sortByModel = (cars, order) => {};
+    //-   console.table(sortByModel(cars, 'asc'));
+    //-   console.table(sortByModel(cars, 'desc'));
+ 
+
+const sortByModel = (cars, order) => {
+
+    const result = [...cars].sort((car_a, car_b) => {
+
+        if (order === 'asc'){
+            return car_a.model.localeCompare(car_b.model);
+        } else if (order === 'desc'){
+            return car_b.model.localeCompare(car_a.model);          
+        }
+
+    });
+    return result;
+};
+
+console.table(sortByModel(cars, 'asc'));
+console.table(sortByModel(cars, 'desc'));
+
+
+
 /*
  */
 /*
