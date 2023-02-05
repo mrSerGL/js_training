@@ -2167,17 +2167,17 @@ console.log(getSortedFriends(users)); */
 
 //todo Дополни функцию getTotalBalanceByGender(users, gender) так, чтобы она возвращала общий баланс пользователей (свойство balance), пол которых (свойство gender) совпадает со значением параметра gender.
 
+// const getTotalBalanceByGender = (users, gender) => {
+//     const userOfGender = users.filter(user => user.gender === gender);
+//     const userOfGenderBalance = userOfGender.reduce((acc, user) => {
+//         return acc + user.balance;
+//     }, 0);
+//     return userOfGenderBalance;
+// };
 
-const getTotalBalanceByGender = (users, gender) => {
-    const userOfGender = users.filter(user => user.gender === gender);
-    const userOfGenderBalance = userOfGender.reduce((acc, user) => {
-        return acc + user.balance;
-    }, 0);
-    return userOfGenderBalance;
-};
+// const getTotalBalanceByGender = (users, gender) => [...users].filter(user => user.gender === gender.userOfGender).reduce((acc, user) => {return acc + user.balance}, 0);
 
-
-console.log(getTotalBalanceByGender(users, 'male'));
+// console.log(getTotalBalanceByGender(users, 'male'));
 
 // Объявлена переменная getTotalBalanceByGender
 // Переменной getTotalBalanceByGender присвоена стрелочная функция с параметрами (users, gender)
@@ -2186,3 +2186,35 @@ console.log(getTotalBalanceByGender(users, 'male'));
 // Если значение параметра gender это строка "male", функция возвращает число 12053
 // Если значение параметра gender это строка "female", функция возвращает число 8863
 // Вызов функции со случайными, но валидными аргументами, возвращает правильное значение
+
+// ===== задача з годинником =====
+/* const totalInputInMinutes = 1441;
+
+const inputInMinutes = totalInputInMinutes%1440;
+const hours = (inputInMinutes/60).toFixed(0)
+const minutes = inputInMinutes%60;
+
+console.log("Time", `${hours}:${minutes}`); */
+
+// ================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

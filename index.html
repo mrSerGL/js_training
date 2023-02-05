@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-    </head>
 
-    <body>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
-<!-- =========== 1_2/02-btn_click_dom.js ================== -->
+    <!-- Normalize -->
 
-<!-- <div class="btn_click">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+        integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom styles -->
+
+    <link rel="stylesheet" href="./styles.css" />
+
+</head>
+
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+
+    <!-- =========== 1_2/02-btn_click_dom.js ================== -->
+
+    <!-- <div class="btn_click">
 
     <label for="">
         Веддите сумму:
@@ -27,122 +41,159 @@
 
 
 
-<!-- ===== module_scripts === -->
+    <!-- ===== module_scripts === -->
 
-<div class="module_scripts">
+    <div class="module_scripts">
 
-    <!-- ===== module 1_1 -->
+        <!-- ===== module 1_1 -->
 
-    <!-- <script src="./js/1_1/01-vars.js" type="module"></script> -->
-    <!-- <script src="./js/1_1/02-input.js" type="module"></script> -->
-    <!-- <script src="./js/1_1/03-numbers.js" type="module"></script> -->
-    <!-- <script src="./js/1_1/04-strings.js" type="module"></script> -->
-    <!-- <script src="./js/1_1/05-comparison-operators.js" type="module"></script> -->
-    <!-- <script src="./js/1_1/06-logical-operators.js" type="module"></script> -->
-    <!-- <script src="./js/1_1/06-1-segment.js" type="module"></script> -->
-    <!-- <script src="./js/1_1/06-2-chat.js" type="module"></script> -->
-    <!-- <script src="./js/1_1/06-3-subscription.js" type="module"></script> -->
+        <!-- <script src="./js/1_1/01-vars.js" type="module"></script> -->
+        <!-- <script src="./js/1_1/02-input.js" type="module"></script> -->
+        <!-- <script src="./js/1_1/03-numbers.js" type="module"></script> -->
+        <!-- <script src="./js/1_1/04-strings.js" type="module"></script> -->
+        <!-- <script src="./js/1_1/05-comparison-operators.js" type="module"></script> -->
+        <!-- <script src="./js/1_1/06-logical-operators.js" type="module"></script> -->
+        <!-- <script src="./js/1_1/06-1-segment.js" type="module"></script> -->
+        <!-- <script src="./js/1_1/06-2-chat.js" type="module"></script> -->
+        <!-- <script src="./js/1_1/06-3-subscription.js" type="module"></script> -->
 
-    <!-- ===== module 1_2 ветвления и цикли -->
+        <!-- ===== module 1_2 ветвления и цикли -->
 
-    <!-- <script src="./js/1_2/01-cycles.js" type="module"></script>  -->
-    <!-- <script src="./js/1_2/02-btn_click_dom.js" type="module"></script>  -->
+        <!-- <script src="./js/1_2/01-cycles.js" type="module"></script>  -->
+        <!-- <script src="./js/1_2/02-btn_click_dom.js" type="module"></script>  -->
 
-    <!-- todo задачи -->
-    <!-- <script src="./js/1_2/07-branching.js" type="module"></script> -->
-    <!-- <script src="./js/1_2/07-1-purchase.js" type="module"></script> -->
-    <!-- <script src="./js/1_2/07-2-discount.js" type="module"></script> -->
-    <!-- <script src="./js/1_2/mod1_less2.js" type="module"></script> -->
+        <!-- todo задачи -->
+        <!-- <script src="./js/1_2/07-branching.js" type="module"></script> -->
+        <!-- <script src="./js/1_2/07-1-purchase.js" type="module"></script> -->
+        <!-- <script src="./js/1_2/07-2-discount.js" type="module"></script> -->
+        <!-- <script src="./js/1_2/mod1_less2.js" type="module"></script> -->
 
-    <!-- ===== module 2_1 массивы  -->
+        <!-- ===== module 2_1 массивы  -->
 
-    <!-- <script src="./js/2_1_massive/01-0-basics.js" type="module"></script> -->
-    <!-- <script src="./js/2_1_massive/01-1-iteration.js" type="module"></script> -->
-    <!-- <script src="./js/2_1_massive/01-2-massive_methodes.js" type="module"></script>   -->
+        <!-- <script src="./js/2_1_massive/01-0-basics.js" type="module"></script> -->
+        <!-- <script src="./js/2_1_massive/01-1-iteration.js" type="module"></script> -->
+        <!-- <script src="./js/2_1_massive/01-2-massive_methodes.js" type="module"></script>   -->
 
-    <!-- todo задачи -->
-    <!-- <script src="./js/2_1_massive/02-payment.js" type="module"></script> -->
-    <!-- <script src="./js/2_1_massive/03-even.js" type="module"></script> -->
-    <!-- <script src="./js/2_1_massive/04-find-login.js" type="module"></script> -->
-    <!-- <script src="./js/2_1_massive/05-smallest-number.js" type="module"></script> -->
-    <!-- <script src="./js/2_1_massive/06-transform.js" type="module"></script> -->
-    <!-- <script src="./js/2_1_massive/07-change-register.js" type="module"></script> -->
-    <!-- <script src="./js/2_1_massive/08-slug.js" type="module"></script> -->
-    <!-- <script src="./js/2_1_massive/09-array-sum.js" type="module"></script> -->
-    <!-- <script src="./js/2_1_massive/10-cards.js" type="module"></script> -->
+        <!-- todo задачи -->
+        <!-- <script src="./js/2_1_massive/02-payment.js" type="module"></script> -->
+        <!-- <script src="./js/2_1_massive/03-even.js" type="module"></script> -->
+        <!-- <script src="./js/2_1_massive/04-find-login.js" type="module"></script> -->
+        <!-- <script src="./js/2_1_massive/05-smallest-number.js" type="module"></script> -->
+        <!-- <script src="./js/2_1_massive/06-transform.js" type="module"></script> -->
+        <!-- <script src="./js/2_1_massive/07-change-register.js" type="module"></script> -->
+        <!-- <script src="./js/2_1_massive/08-slug.js" type="module"></script> -->
+        <!-- <script src="./js/2_1_massive/09-array-sum.js" type="module"></script> -->
+        <!-- <script src="./js/2_1_massive/10-cards.js" type="module"></script> -->
 
-     <!-- ===== module 2_2 функции  -->
+        <!-- ===== module 2_2 функции  -->
 
-    <!-- <script src="./js/2_2 functions/01-basics.js " type="module"></script> -->
-    <!-- <script src="./js/2_2 functions/02-calculate-total-price.js" type="module"></script> -->
-    <!-- <script src="./js/2_2 functions/03-log-items.js" type="module"></script> -->
-    <!-- <script src="./js/2_2 functions/04-find-login.js" type="module"></script> -->
-    <!-- <script src="./js/2_2 functions/05-find-smallest-number.js" type="module"></script> -->
-    <!-- <script src="./js/2_2 functions/06-change-case.js" type="module"></script> -->
-    <!-- <script src="./js/2_2 functions/07-slugify.js" type="module"></script> -->
-    <!-- <script src="./js/2_2 functions/08-arguments.js" type="module"></script> -->
-    <!-- <script src="./js/2_2 functions/lesson-02.js" type="module"></script> -->
+        <!-- <script src="./js/2_2 functions/01-basics.js " type="module"></script> -->
+        <!-- <script src="./js/2_2 functions/02-calculate-total-price.js" type="module"></script> -->
+        <!-- <script src="./js/2_2 functions/03-log-items.js" type="module"></script> -->
+        <!-- <script src="./js/2_2 functions/04-find-login.js" type="module"></script> -->
+        <!-- <script src="./js/2_2 functions/05-find-smallest-number.js" type="module"></script> -->
+        <!-- <script src="./js/2_2 functions/06-change-case.js" type="module"></script> -->
+        <!-- <script src="./js/2_2 functions/07-slugify.js" type="module"></script> -->
+        <!-- <script src="./js/2_2 functions/08-arguments.js" type="module"></script> -->
+        <!-- <script src="./js/2_2 functions/lesson-02.js" type="module"></script> -->
 
-     <!-- ===== module 3_1 объекты  -->
+        <!-- ===== module 3_1 объекты  -->
 
-    <!-- <script src="./js/3_1_objects/01-1-creation.js" type="module"></script> -->
-    <!-- <script src="./js/3_1_objects/01-2-methods.js" type="module"></script> -->
-    <!-- <script src="./js/3_1_objects/01-3-iteration.js" type="module"></script> -->
-    <!-- <script src="./js/3_1_objects/02-friends.js" type="module"></script> -->
-    <!-- <script src="./js/3_1_objects/03-cart.js" type="module"></script> -->
+        <!-- <script src="./js/3_1_objects/01-1-creation.js" type="module"></script> -->
+        <!-- <script src="./js/3_1_objects/01-2-methods.js" type="module"></script> -->
+        <!-- <script src="./js/3_1_objects/01-3-iteration.js" type="module"></script> -->
+        <!-- <script src="./js/3_1_objects/02-friends.js" type="module"></script> -->
+        <!-- <script src="./js/3_1_objects/03-cart.js" type="module"></script> -->
 
-     <!-- <script src="./js/3_1_objects/objects.js" type="module"></script> -->
-     <!-- <script src="./js/3_1_objects/auto_check.js" type="module"></script> -->
-     <!-- <script src="./js/3_1_objects/my_transactions.js" type="module"></script> -->
+        <!-- <script src="./js/3_1_objects/objects.js" type="module"></script> -->
+        <!-- <script src="./js/3_1_objects/auto_check.js" type="module"></script> -->
+        <!-- <script src="./js/3_1_objects/my_transactions.js" type="module"></script> -->
 
-   <!-- ===== module 3_2 объекты  -->
+        <!-- ===== module 3_2 объекты  -->
 
-     <!-- <script src="./js/3_2_objects/01-spread.js" type="module"></script> -->
-    <!-- <script src="./js/3_2_objects/02-destructuring.js" type="module"></script> -->
-    <!-- <script src="./js/3_2_objects/03-markup.js" type="module"></script> -->
+        <!-- <script src="./js/3_2_objects/01-spread.js" type="module"></script> -->
+        <!-- <script src="./js/3_2_objects/02-destructuring.js" type="module"></script> -->
+        <!-- <script src="./js/3_2_objects/03-markup.js" type="module"></script> -->
 
-    <!-- <script src="./js/3_2_objects/04-cart.js" type="module"></script> -->
-    <!-- <script src="./js/3_2_objects/my_cart.js" type="module"></script> -->
+        <!-- <script src="./js/3_2_objects/04-cart.js" type="module"></script> -->
+        <!-- <script src="./js/3_2_objects/my_cart.js" type="module"></script> -->
 
-    <!-- <script src="./js/3_2_objects/lesson-02.js" type="module"></script> -->
+        <!-- <script src="./js/3_2_objects/lesson-02.js" type="module"></script> -->
 
-   <!-- ===== module 4_1 Callback-функции  -->
+        <!-- ===== module 4_1 Callback-функции  -->
 
         <!-- <script src="./js/4_1_callback_functions/01-callbacks.js" type="module"></script> -->
         <!-- <script src="./js/4_1_callback_functions/02-closures.js" type="module"></script> -->
         <!-- <script src="./js/4_1_callback_functions/03-arrow-fns.js" type="module"></script> -->
 
-        <script src="./js/4_1_callback_functions/auto_check.js" type="module"></script>
-         <!-- <script src="./js/4_1_callback_functions/lesson-01.js" type="module"></script> -->
+        <!-- <script src="./js/4_1_callback_functions/auto_check.js" type="module"></script> -->
+        <!-- <script src="./js/4_1_callback_functions/lesson-01.js" type="module"></script> -->
 
 
-      
-    <!-- ===== module 4_2 Перебирающие методы массива  -->    
-    
-    
 
-            <!-- <script src="./js/4_2_massive_methodes/01-foreach.js" type="module"></script> -->
-            <!-- <script src="./js/4_2_massive_methodes/02-map.js" type="module"></script> -->
-            <!-- <script src="./js/4_2_massive_methodes/03-filter.js" type="module"></script> -->
-            <!-- <script src="./js/4_2_massive_methodes/04-find.js" type="module"></script> -->
-            <!-- <script src="./js/4_2_massive_methodes/05-every-some.js" type="module"></script> -->
-            <!-- <script src="./js/4_2_massive_methodes/06-reduce.js" type="module"></script> -->
-                        <!-- <script src="./js/4_2_massive_methodes/lesson-02.js" type="module"></script> -->
+        <!-- ===== module 4_2 Перебирающие методы массива  -->
+
+
+
+        <!-- <script src="./js/4_2_massive_methodes/01-foreach.js" type="module"></script> -->
+        <!-- <script src="./js/4_2_massive_methodes/02-map.js" type="module"></script> -->
+        <!-- <script src="./js/4_2_massive_methodes/03-filter.js" type="module"></script> -->
+        <!-- <script src="./js/4_2_massive_methodes/04-find.js" type="module"></script> -->
+        <!-- <script src="./js/4_2_massive_methodes/05-every-some.js" type="module"></script> -->
+        <!-- <script src="./js/4_2_massive_methodes/06-reduce.js" type="module"></script> -->
+        <!-- <script src="./js/4_2_massive_methodes/lesson-02.js" type="module"></script> -->
+
+        <!-- <script src="./js/4_2_massive_methodes/01-sort.js" type="module"></script> -->
+        <!-- <script src="./js/4_2_massive_methodes/02-flat.js" type="module"></script> -->
+        <!-- <script src="./js/4_2_massive_methodes/03-chaining.js" type="module"></script> -->
+        <!-- <script src="./js/4_2_massive_methodes/04-lodash.js" type="module"></script> -->
+
+        <!-- ===== module 5_1 This  -->
+
+        <h3>===== to module 5_1 This ====== </h3>
+
+        <div class="counter">
+            <button class="js-decrement">Уменьшить</button>
+            <p class="js-value">0</p>
+            <button class="js-increment">Увеличить</button>
+        </div>
+
+
+        <!-- <script src="./js/5_1_this/01-this.js" type="module"></script> -->
+        <!-- <script src="./js/5_1_this/02-fn-methods.js" type="module"></script> -->
+        <!-- <script src="./js/5_1_this/03-counter.js" type="module"></script> -->
+          <script src="./js/5_1_this/auto_check.js" type="module"></script>
+
+       <!-- ===== module 5_2 Prot0types ====== -->
+       <h3>===== to module 5_2 Prototypes ====== </h3>
+
+       <div id="counter-1">
+        <button data-decrement>-</button>
+        <span data-value>0</span>
+        <button data-increment>+</button>
+      </div>
+  
+      <div id="counter-2">
+        <button data-decrement>Уменьшить</button>
+        <span data-value>0</span>
+        <button data-increment>Увеличить</button>
+      </div>
+
+
+    <!-- <script src="./js/5_2_prototypes/01-object-prototype.js" type="module"></script> -->
+    <!-- <script src="./js/5_2_prototypes/02-constructors.js" type="module"></script> -->
+    <!-- <script src="js/5_2_prototypes/03-counter.js" type="module"></script> -->
 
 
         <!-- <script src="./js/temp.js" type="module"></script> -->
         <!-- <script src="./js/codewars.js" type="module"></script> -->
-        
-
-
-
-</div>
 
 
 
 
-            
+    </div>
 
+  
 
 
 
@@ -152,8 +203,15 @@
 
 
 
-        <!-- <script src="./js/temp.js" type="module"></script> -->
 
-        <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, neque! -->
-    </body>
+
+
+
+
+
+    <!-- <script src="./js/temp.js" type="module"></script> -->
+
+    <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, neque! -->
+</body>
+
 </html>

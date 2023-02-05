@@ -299,7 +299,7 @@ const cars = [
     //-   console.table(sortByModel(cars, 'desc'));
  
 
-const sortByModel = (cars, order) => {
+/* const sortByModel = (cars, order) => {
 
     const result = [...cars].sort((car_a, car_b) => {
 
@@ -314,7 +314,7 @@ const sortByModel = (cars, order) => {
 };
 
 console.table(sortByModel(cars, 'asc'));
-console.table(sortByModel(cars, 'desc'));
+console.table(sortByModel(cars, 'desc')); */
 
 
 
@@ -397,8 +397,9 @@ console.table(sortByModel(cars, 'desc'));
 //   }, ''); //{totalAmount, totalPrice}
 
 //   console.log(result);
-/*
- */
+
+
+// ===================================================
 /* 
       ## Example 11 - Ланцюжки методів
       Нехай функція `getAvailableCarNames` повертає масив моделей автомобілів, але
@@ -406,6 +407,8 @@ console.table(sortByModel(cars, 'desc'));
       const getModelsOnSale = cars => {};
       console.table(getModelsOnSale(cars));
   */
+    //   const getModelsOnSale = cars => [...cars].filter(({onSale}) => onSale === true );
+    //   console.table(getModelsOnSale(cars));
 /*
  */
 /*
@@ -414,4 +417,10 @@ console.table(sortByModel(cars, 'desc'));
       (Властивість onSale), відсортованих за зростанням ціни.
       const getSortedCarsOnSale = cars => {};
       console.table(getSortedCarsOnSale(cars));
+    
   */
+
+/*       const getModelsOnSale = cars => [...cars]
+      .filter(({onSale}) => onSale === true )
+      .sort((a,b)=> a.price - b.price) ;
+      console.table(getModelsOnSale(cars)); */
