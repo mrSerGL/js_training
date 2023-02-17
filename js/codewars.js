@@ -1143,3 +1143,79 @@ function createPhoneNumber(input) {
 } */
 
 // console.log(createPhoneNumber(phoneNumber));
+
+// ================  Mexican Wave =====================
+//todo:  In this simple Kata your task is to create a function that turns a string into a Mexican Wave. You will be passed a string and you must return that string in an array where an uppercase letter is a person standing up.
+
+// Rules
+// 1.  The input string will always be lower case but maybe empty.
+
+// 2.  If the character in the string is whitespace then pass over it as if it was an empty seat
+
+// Example
+// wave("hello") => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
+
+const word = 'two words';
+
+/* function wave(input) {
+    return input.split('').map((letter, index) => {
+        const arrayLetters = input.toLowerCase().split('');
+
+        if (letter === ' ') {
+            arrayLetters.splice(index + 1, 1, arrayLetters[index + 1].toUpperCase());
+            return arrayLetters.join('');
+        } else {
+            arrayLetters.splice(index, 1, arrayLetters[index].toUpperCase());
+            return arrayLetters.join('');
+        }
+    });
+} */
+
+
+/* 
+function wave(str) {
+  return str.split('').map((l, i, a) => {
+    let c = a.slice();
+    c[i] = c[i].toUpperCase();
+    return c.join('');
+  }).filter((w, i) => w[i] !== ' ');
+} */
+
+/* function wave(str){
+  let newArr = [];
+  for (let i = 0; i < str.length; i++) {
+    let copy = str.split('');
+    if(copy[i] !== ' ') {
+    copy[i] = copy[i].toUpperCase()
+    newArr.push(copy.join(''))
+    }
+  }
+  return newArr
+} */
+
+/* function wave(str){
+  let result = [];
+  
+  str.split("").forEach((char, index) => {
+      if (/[a-z]/.test(char)) {
+          result.push(str.slice(0, index) + char.toUpperCase() + str.slice(index + 1));
+      }
+  });
+  
+  return result;
+}
+
+console.log(wave(word)) */;
+
+// ====== Who likes it? ================================
+
+// todo: You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
+
+//* Implement the function which takes an array containing the names of people that like an item. It must return the display text as shown in the examples:
+
+// []                                -->  "no one likes this"
+// ["Peter"]                         -->  "Peter likes this"
+// ["Jacob", "Alex"]                 -->  "Jacob and Alex like this"
+// ["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
+// ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
+// Note: For 4 or more names, the number in "and 2 others" simply increases.
