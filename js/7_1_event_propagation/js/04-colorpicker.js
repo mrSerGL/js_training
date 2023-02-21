@@ -16,9 +16,7 @@ const colors = [
   { hex: '#607d8b', rgb: '96,125,139' },
 ];
 
-
-
-const paletteContainer = document.querySelector('.js-palette');
+/* const paletteContainer = document.querySelector('.js-palette');
 const cardsMarkup = createColorCardsMarkup(colors);
 
 paletteContainer.insertAdjacentHTML('beforeend', cardsMarkup);
@@ -30,12 +28,12 @@ function createColorCardsMarkup(colors) {
     .map(({ hex, rgb }) => {
       return `
     <div class="color-card">
-     <div><div><div> <div
+     <div
      class="color-swatch"
      data-hex="${hex}"
      data-rgb="${rgb}"
      style="background-color: ${hex}"
-   ></div></div></div></div>
+   </div>
       <div class="color-meta">
         <p>HEX: ${hex}</p>
         <p>RGB: ${rgb}</p>
@@ -77,3 +75,59 @@ function addActiveCardClass(card) {
   card.classList.add('is-active');
 }
 
+ */
+
+const paletteContainer = document.querySelector('.js-palette');
+const cardsMarkup = createColorCardsMarkup(colors);
+
+paletteContainer.insertAdjacentHTML('beforeend', cardsMarkup);
+
+paletteContainer.addEventListener('click', onPaletteContainerClick);
+
+function createColorCardsMarkup(colors) {
+  const markup = colors
+    .map(({ hex, rgb }) => {
+      return `
+  <div class="color-card">
+       <div
+          class="color-swatch"
+          data-hex="${hex}"
+          data-rgb="${rgb}"
+       style="background-color: ${hex}"
+     ></div>
+        <div class="color-meta">
+          <p>HEX: ${hex}</p>
+          <p>RGB: ${rgb}</p>
+        </div>
+      </div>
+  `;
+    })
+    .join('');
+
+  return markup;
+}
+
+function onPaletteContainerClick(event) {
+  const isColorSwatchEl = event.target.classList.contains('color-swatch');
+
+  if (!isColorSwatchEl) {
+    return;
+  }
+
+  const curentActiveCard = document.querySelector('.color-card.is-active');
+
+  if (curentActiveCard) {
+    curentActiveCard.classList.remove('is-active');
+  }
+
+  const swatchEl = event.target;
+
+  // const parentColorCard = swatchEl.parentNode; //! не надежно если изм. верстка
+
+  // swatchEl.classList.add('is-active') //! клас присваивается не <div class="color-card">!
+
+  const parentColorCard = swatchEl.closest('.color-card'); //!! ищет вверх до элемента с классом color-card'
+  parentColorCard.classList.add('is-active');
+
+  document.body.style.backgroundColor = event.target.dataset.hex;
+}
