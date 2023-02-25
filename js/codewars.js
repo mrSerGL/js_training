@@ -1171,7 +1171,6 @@ const word = 'two words';
     });
 } */
 
-
 /* 
 function wave(str) {
   return str.split('').map((l, i, a) => {
@@ -1205,9 +1204,7 @@ function wave(str) {
   return result;
 }
 
-console.log(wave(word)) */;
-
-// ====== Who likes it? ================================
+console.log(wave(word)) */ // ====== Who likes it? ================================
 
 // todo: You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
 
@@ -1219,3 +1216,11 @@ console.log(wave(word)) */;
 // ["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
 // ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
 // Note: For 4 or more names, the number in "and 2 others" simply increases.
+
+// =========================================================
+
+for (var i = 0; i < 5; i++) {
+  setTimeout(function() {
+    console.log(i);
+  }, i * 1000);
+}
