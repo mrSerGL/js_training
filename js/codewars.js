@@ -1204,7 +1204,9 @@ function wave(str) {
   return result;
 }
 
-console.log(wave(word)) */ // ====== Who likes it? ================================
+console.log(wave(word)) */ 
+
+// ====== Who likes it? ================================
 
 // todo: You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
 
@@ -1217,10 +1219,106 @@ console.log(wave(word)) */ // ====== Who likes it? =============================
 // ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
 // Note: For 4 or more names, the number in "and 2 others" simply increases.
 
-// =========================================================
 
-for (var i = 0; i < 5; i++) {
-  setTimeout(function() {
-    console.log(i);
-  }, i * 1000);
+/* function displayLikes(likes) {
+  switch (likes.length) {
+    case 0:
+      return "no one likes this";
+    case 1:
+      return likes[0] + " likes this";
+    case 2:
+      return likes[0] + " and " + likes[1] + " like this";
+    case 3:
+      return likes[0] + ", " + likes[1] + " and " + likes[2] + " like this";
+    default:
+      return likes[0] + ", " + likes[1] + " and " + (likes.length - 2) + " others like this";
+  }
 }
+
+console.log(displayLikes(["Alex", "Jacob", "Mark", "Max"]));  */
+
+
+//========================== Stop gninnipS My sdroW ============================
+// todo Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.
+
+// Examples:
+
+// spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw" 
+// spinWords( "This is a test") => returns "This is a test" 
+// spinWords( "This is another test" )=> returns "This is rehtona test"
+
+// const arg = "This is another test";
+
+/* function reversLongWord(data) {
+ return data.split(" ").map(word => {
+  if(word.length >= 5){
+    return [...word].reverse().join('');
+  } else {
+    return word;
+  }
+  
+ }).join(' ');
+ }; */
+
+
+
+/*  function reversLongWord(words){
+  return words.split(' ').map(function (word) {
+    return (word.length > 4) ? word.split('').reverse().join('') : word;
+  }).join(' ');
+}
+
+console.log(reversLongWord(arg)); */
+
+//========================== Mumbling ============================
+// todo This time no story, no theory. The examples below show you how to write function accum:
+
+// Examples:
+// accum("abcd") -> "A-Bb-Ccc-Dddd"
+// accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+// accum("cwAt") -> "C-Ww-Aaa-Tttt"
+// The parameter of accum is a string which includes only letters from a..z and A..Z.
+
+
+/* const arg = "abcd";
+
+
+function formatString(data) {
+ return data.toLowerCase().split('').map((letter, index) =>{
+ return letter[0].toUpperCase()+letter.repeat(index)
+ }).join('-')
+ };
+
+console.log(formatString(arg)); */
+
+//===================== Find the missing letter ============================
+// todo:  Find the missing letter!  Write a method that takes an array of consecutive (increasing) letters as input and that returns the missing letter in the array.
+
+// You will always get an valid array. And it will be always exactly one letter be missing. The length of the array will always be at least 2.
+// The array will always contain letters in only one case.
+
+// Example:
+
+// ['a','b','c','d','f'] -> 'e'pwd
+// ['O','Q','R','S'] -> 'P'
+// (Use the English alphabet with 26 letters!)
+
+//  how get UNICODE - use  charCodeAt(0)  !!!
+
+//  String.prototype.codePointAt()
+// The codePointAt() method returns a non-negative integer that is the Unicode code point value at the given position. 
+
+
+
+/* function findMissingLetter(array) {
+  let first = array[0].charCodeAt(0)
+  for (let i = 1; i < array.length; i++) {
+    if (first + i !== array[i].charCodeAt(0)) {
+      return String.fromCharCode(first + i)
+    }
+  }
+  throw new Error("Invalid input")
+} */
+
+
+
