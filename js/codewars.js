@@ -1204,7 +1204,7 @@ function wave(str) {
   return result;
 }
 
-console.log(wave(word)) */ 
+console.log(wave(word)) */
 
 // ====== Who likes it? ================================
 
@@ -1218,7 +1218,6 @@ console.log(wave(word)) */
 // ["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
 // ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
 // Note: For 4 or more names, the number in "and 2 others" simply increases.
-
 
 /* function displayLikes(likes) {
   switch (likes.length) {
@@ -1237,14 +1236,13 @@ console.log(wave(word)) */
 
 console.log(displayLikes(["Alex", "Jacob", "Mark", "Max"]));  */
 
-
 //========================== Stop gninnipS My sdroW ============================
 // todo Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.
 
 // Examples:
 
-// spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw" 
-// spinWords( "This is a test") => returns "This is a test" 
+// spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw"
+// spinWords( "This is a test") => returns "This is a test"
 // spinWords( "This is another test" )=> returns "This is rehtona test"
 
 // const arg = "This is another test";
@@ -1259,8 +1257,6 @@ console.log(displayLikes(["Alex", "Jacob", "Mark", "Max"]));  */
   
  }).join(' ');
  }; */
-
-
 
 /*  function reversLongWord(words){
   return words.split(' ').map(function (word) {
@@ -1278,7 +1274,6 @@ console.log(reversLongWord(arg)); */
 // accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
 // accum("cwAt") -> "C-Ww-Aaa-Tttt"
 // The parameter of accum is a string which includes only letters from a..z and A..Z.
-
 
 /* const arg = "abcd";
 
@@ -1306,9 +1301,7 @@ console.log(formatString(arg)); */
 //  how get UNICODE - use  charCodeAt(0)  !!!
 
 //  String.prototype.codePointAt()
-// The codePointAt() method returns a non-negative integer that is the Unicode code point value at the given position. 
-
-
+// The codePointAt() method returns a non-negative integer that is the Unicode code point value at the given position.
 
 /* function findMissingLetter(array) {
   let first = array[0].charCodeAt(0)
@@ -1320,5 +1313,68 @@ console.log(formatString(arg)); */
   throw new Error("Invalid input")
 } */
 
+// ====================== Isograms  =================================
+// todo: An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
 
+// Example: (Input --> Output)
 
+// "Dermatoglyphics" --> true "aba" --> false "moOse" --> false (ignore letter case)
+
+// isIsogram "Dermatoglyphics" = true
+// isIsogram "moose" = false
+// isIsogram "aba" = false
+
+/* const arg = 'moOse';
+
+function name_func(data) {
+    const uniqueLettersLength = new Set(data.toLowerCase())
+    return uniqueLettersLength.size === data.length;
+}
+
+function isIsogram(str){
+	return new Set(str.toUpperCase()).size == str.length;
+}
+
+console.log(name_func(arg)); */
+
+// ====================== Find the odd int  =================================
+// todo:  Given an array of integers, find the one that appears an odd number of times.
+
+// There will always be only one integer that appears an odd number of times.
+
+// Examples
+// [7] should return 7, because it occurs 1 time (which is odd).
+// [0] should return 0, because it occurs 1 time (which is odd).
+// [1,1,2] should return 2, because it occurs 1 time (which is odd).
+// [0,1,0,1,0] should return 0, because it occurs 3 times (which is odd).
+// [1,2,2,3,3,3,4,3,3,3,2,2,1] should return 4, because it appears 1 time (which is odd).
+
+const arg = [1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1, 3];
+
+function findOddInt(data) {
+  
+    const resultCount = data.reduce((acc, item, index, array) => {
+        if (!acc.hasOwnProperty(item)) {
+            acc[item] = 0;
+        }
+        acc[item] += 1;
+        return acc;
+    }, {});
+
+    console.log(resultCount);
+
+    const intKeys = Object.keys(resultCount);
+    const result = [];
+
+    for (const intKey of intKeys) {
+        if (resultCount[intKey] % 2 !== 0) {
+            result.push(Number(intKey));
+        }
+    }
+
+    // console.log(...result);
+
+    return result;
+}
+
+console.log(findOddInt(arg));
