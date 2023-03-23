@@ -1349,32 +1349,87 @@ console.log(name_func(arg)); */
 // [0,1,0,1,0] should return 0, because it occurs 3 times (which is odd).
 // [1,2,2,3,3,3,4,3,3,3,2,2,1] should return 4, because it appears 1 time (which is odd).
 
-const arg = [1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1, 3];
+/* const arg = [7];
 
-function findOddInt(data) {
-  
-    const resultCount = data.reduce((acc, item, index, array) => {
-        if (!acc.hasOwnProperty(item)) {
-            acc[item] = 0;
-        }
-        acc[item] += 1;
-        return acc;
-    }, {});
-
-    console.log(resultCount);
-
-    const intKeys = Object.keys(resultCount);
-    const result = [];
-
-    for (const intKey of intKeys) {
-        if (resultCount[intKey] % 2 !== 0) {
-            result.push(Number(intKey));
-        }
+function findOdd(data) {
+  const flatArray = data.flat(); // Flatten the array first
+  const resultCount = flatArray.reduce((acc, item) => {
+    if (!acc.hasOwnProperty(item)) {
+      acc[item] = 0;
     }
+    acc[item] += 1;
+    return acc;
+  }, {});
 
-    // console.log(...result);
+  console.log(resultCount);
 
-    return result;
+  const intKeys = Object.keys(resultCount);
+  const result = [];
+
+  for (const intKey of intKeys) {
+    if (resultCount[intKey] % 2 !== 0) {
+      result.push(Number(intKey));
+    }
+  }
+
+  // console.log(...result);
+
+  return Number(result.join());
 }
 
-console.log(findOddInt(arg));
+console.log(findOdd(arg)); */
+
+// Finish the solution so that it takes an input n (integer) and returns a string that is the decimal representation of the number grouped by commas after every 3 digits.
+
+// Assume: 0 <= n < 2147483647
+
+// Examples
+//        1  ->           "1"
+//       10  ->          "10"
+//      100  ->         "100"
+//     1000  ->       "1,000"
+//    10000  ->      "10,000"
+//   100000  ->     "100,000"
+//  1000000  ->   "1,000,000"
+// 35235235  ->  "35,235,235"
+
+// const integer = 35235235;
+// const inputData = integer.toString();
+// const inputDataLength = inputData.length
+// console.log(inputData.split(''));
+
+// const threeDigits = inputData.split('').slice(inputDataLength - 3, inputDataLength);
+// console.log(threeDigits);
+
+
+function name_func(integer) {
+
+    const inputData = integer.toString();
+    let inputDataLength = inputData.length;
+    let outputData ='';
+
+    for (let i = 0; i <= 3; i += 1) {
+        if (inputDataLength < 3) {
+            let threeDigits = inputData.split('').slice(0, inputDataLength);
+           
+            outputData += `,${threeDigits.join('')}`;
+         
+            
+            console.log(outputData);
+            return;
+        }
+
+        let threeDigits = inputData.split('').slice(inputDataLength - 3, inputDataLength);
+        console.log(threeDigits);
+        outputData += `,${threeDigits.join('')}`;
+        console.log(outputData);
+
+        inputDataLength -= 3;
+    }
+
+    return outputData
+}
+
+
+console.log(name_func(1000000000));
+
