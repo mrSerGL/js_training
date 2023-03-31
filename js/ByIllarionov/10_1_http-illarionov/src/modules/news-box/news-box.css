@@ -1,0 +1,201 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito:400,300,700|Roboto:300,400,700|Roboto+Mono);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css);
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.news-app {
+  color: #333;
+}
+.news-app h2, .news-app figure {
+  padding: 0;
+  margin: 0;
+}
+.news-app .header {
+  font-family: "Nunito", sans-serif;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.12);
+}
+.news-app .header__wrapper {
+  display: flex;
+  width: 94%;
+  max-width: 700px;
+  height: 4em;
+  line-height: 4em;
+  padding: 0 3%;
+  margin: 0 auto;
+}
+.news-app .header__logo {
+  display: inline-block;
+  font-size: 1.3em;
+  line-height: 3.2em;
+  margin-right: 0.5em;
+  opacity: 0.8;
+}
+.news-app .header__brand {
+  font-size: 1.3em;
+}
+.news-app .search {
+  font-family: "Nunito", sans-serif;
+  max-width: 600px;
+  padding: 0 3%;
+  margin: 2.5em auto 1em auto;
+}
+.news-app .search__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 3em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.news-app .search__field {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 300;
+  margin: 0 1em;
+  border: none;
+  background: none;
+}
+.news-app .search__field:focus-visible {
+  outline: 0;
+}
+.news-app .search__field::-moz-placeholder {
+  font-weight: 300;
+  opacity: 0.3;
+}
+.news-app .search__field:-ms-input-placeholder {
+  font-weight: 300;
+  opacity: 0.3;
+}
+.news-app .search__field::placeholder {
+  font-weight: 300;
+  opacity: 0.3;
+}
+.news-app .search__icon {
+  display: block;
+  width: 1em;
+  height: 1.4em;
+}
+.news-app .search__icon .fa-magnifying-glass {
+  display: inline;
+  font-size: 1.2em;
+}
+.news-app .search__icon .fa-circle-notch {
+  display: none;
+}
+.news-app .search__btn {
+  cursor: pointer;
+  background: none;
+  border: none;
+  line-height: 1.5em;
+  padding: 0 0.4em;
+}
+.news-app .search__btn_loading .search__icon .fa-magnifying-glass {
+  display: none;
+}
+.news-app .search__btn_loading .search__icon .fa-circle-notch {
+  display: block;
+  -webkit-animation-name: spin;
+          animation-name: spin;
+  -webkit-animation-duration: 800ms;
+          animation-duration: 800ms;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.news-app .articles {
+  max-width: 700px;
+  display: flex;
+  gap: 2em;
+  flex-direction: column;
+  padding: 4em 3%;
+  margin: 0 auto;
+}
+.news-app .article {
+  width: 100%;
+  font-family: Roboto, sans-serif;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 2em 2.5em;
+  margin: 0 auto;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+.news-app .article__title {
+  font-size: 1.4em;
+  text-align: center;
+  margin: 0.8em 0 1em 0;
+}
+.news-app .article__publish-date, .news-app .article__author {
+  position: absolute;
+  top: 0.8em;
+  right: 0;
+  width: 50%;
+  font-family: Roboto Mono, sans-serif;
+  font-size: 0.8em;
+  font-weight: 300;
+  text-align: right;
+  text-transform: uppercase;
+  opacity: 0.8;
+  padding: 0.3em 3% 0.2em 0;
+  background: linear-gradient(to right, hsla(0deg, 0%, 100%, 0), #eeeded);
+}
+.news-app .article__author {
+  left: 0;
+  right: auto;
+  text-align: left;
+  padding-left: 3%;
+  background: linear-gradient(to left, hsla(0deg, 0%, 100%, 0), #eeeded);
+}
+.news-app .article__image {
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+.news-app .article__image img {
+  width: 100%;
+  height: auto;
+}
+.news-app .article__content {
+  overflow-wrap: anywhere;
+  margin: 1em 0;
+}
+.news-app .article__time-for-reading {
+  font-family: Roboto Mono, sans-serif;
+  text-align: right;
+  font-size: 0.8em;
+}
+.news-app .article:hover .article__image {
+  filter: none;
+}
+.news-app .load-more {
+  display: flex;
+}
+.news-app .load-more__btn {
+  width: 30%;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  border: none;
+  padding: 0.5em 0;
+  background: rgba(0, 0, 0, 0.07);
+  cursor: pointer;
+  margin: 0 auto;
+}
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=news-box.css.map */
